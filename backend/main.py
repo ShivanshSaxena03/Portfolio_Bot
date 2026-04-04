@@ -64,7 +64,7 @@ async def chat(request: Request):
                 "Content-Type": "application/json",
             },
             json={
-                "model": "openai/gpt-4o-mini",
+                "model": "openrouter/auto",
                 "messages": [
                     {"role": "system", "content": SYSTEM_PROMPT},
                     *messages
