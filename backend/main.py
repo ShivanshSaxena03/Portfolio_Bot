@@ -73,7 +73,7 @@ async def chat(request: Request):
                     *messages
                 ],
                 "max_tokens": 80
-            }
+            },
             timeout=10
         )
         if not OPENROUTER_API_KEY:
