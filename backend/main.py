@@ -69,7 +69,7 @@ async def chat(request: Request):
                     {"role": "system", "content": SYSTEM_PROMPT},
                     *messages
                 ],
-                "max_tokens": 80
+                "max_tokens": 20,
             },
             timeout=10
         )
