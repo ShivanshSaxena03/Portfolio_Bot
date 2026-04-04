@@ -31,7 +31,10 @@ app.add_middleware(SlowAPIMiddleware)
 # ===== CORS =====
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # ⚠️ change in production
+    allow_origins=[
+    "http://localhost:5173",
+    "https://your-frontend.vercel.app"
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -71,19 +74,24 @@ async def chat(request: Request):
                 ],
                 "max_tokens": 80
             }
+            timeout=10
         )
-
+        if not OPENROUTER_API_KEY:
+            return {"reply": "⚠️ API key not configured"}
         result = response.json()
         print("OpenRouter response:", result)
 
         # ✅ HANDLE ERROR SAFELY
-        if "choices" not in result:
-            error_msg = result.get("error", {}).get("message", "Unknown error")
+        
+        if not response.ok:
             return {
-                "reply": f"⚠️ API Error: {error_msg}"
+                "reply": f"⚠️ API Error: {result.get('error', {}).get('message', 'Request failed')}"
             }
 
-        # ✅ EXTRACT RESPONSE SAFELY
+        if "choices" not in result:
+            return {"reply": "⚠️ Invalid response from AI"}
+
+                # ✅ EXTRACT RESPONSE SAFELY
         bot_reply = result["choices"][0]["message"]["content"]
 
         return {
