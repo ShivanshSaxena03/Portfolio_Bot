@@ -1519,85 +1519,14 @@ function scrollToSection(id) {
   document.querySelectorAll('.hotbar-slot').forEach(s => s.classList.remove('active'));
 }
 
-// ===== DOWNLOAD CV =====
-function downloadCV(e) {
-  e.preventDefault();
-  // Create a text-based CV download (since no actual file exists yet)
-  const cvContent = `SHIVANSH SAXENA
-Full Stack Developer — AI Engineer
-================================
-Phone: +91-8130399726
-Email: shivanshsaxena03102006@gmail.com
-LinkedIn: linkedin.com/in/shivanshsaxena03
-GitHub: github.com/ShivanshSaxena03
 
-SUMMARY
--------
-Full Stack Developer and AI Enthusiast with experience in building scalable web and AI-driven systems using Python and JavaScript.
-
-EXPERIENCE
-----------
-Python Intern (AI/ML) — Netprophets Cyberworks (June 2025)
-• Built data preprocessing pipelines on 10K+ datasets, cutting errors by 25%
-• Applied feature engineering, increasing model accuracy by ~12%
-• Automated workflows, reducing manual effort by 30%
-
-PROJECTS
---------
-• AI Outfit Generator Web App (React, FastAPI, LLM)
-• AquaSentinel — Object Detection System (Python, YOLOv5, OpenCV)
-• AI Derma — Skin Analysis Platform (Python, FastAPI, LLM)
-• ScrapySniffer — Web Scraper (Python, BeautifulSoup)
-
-SKILLS
-------
-Languages: Python, JavaScript
-Frameworks: React, Node.js, Flask, FastAPI
-AI/ML: TensorFlow, PyTorch, Keras, YOLOv5, OpenCV
-Data: Pandas, NumPy, Matplotlib, Seaborn
-Databases: MongoDB, SQLite3
-Tools: Selenium, BeautifulSoup, Git, Linux
-
-EDUCATION
----------
-B.Tech + Integrated M.Tech — JIIT (Expected 2029) | CGPA: 7.7
-10+2 PCM — DAV Public School, Brij Vihar | 90%
-
-CERTIFICATIONS
---------------
-• The Complete Python Developer — Udemy
-• Machine Learning — Simplilearn
-• Generative AI for Beginners — Simplilearn
-• Python Silver Badge — HackerRank`;
-
-  const blob = new Blob([cvContent], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'Shivansh_Saxena_CV.txt';
-  a.click();
-  URL.revokeObjectURL(url);
-
-  // Show particle burst
-  const btn = document.getElementById('cv-download');
-  const rect = btn.getBoundingClientRect();
-  for (let i = 0; i < 15; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.background = '#FFAA00';
-    p.style.left = (rect.left + rect.width/2 + (Math.random()-0.5)*60) + 'px';
-    p.style.top = (rect.top + (Math.random()-0.5)*20) + 'px';
-    document.body.appendChild(p);
-    setTimeout(() => p.remove(), 2000);
-  }
-}
 
 // ===== PROJECT REDIRECT =====
 const projectLinks = {
   outfit: 'https://github.com/ShivanshSaxena03',
   aqua: 'https://github.com/ShivanshSaxena03',
   derma: 'https://github.com/ShivanshSaxena03',
-  scraper: 'https://github.com/ShivanshSaxena03'
+//   scraper: 'https://github.com/ShivanshSaxena03'
 };
 function openProject(id) {
   window.open(projectLinks[id] || 'https://github.com/ShivanshSaxena03', '_blank');
@@ -1696,7 +1625,7 @@ async function sendMessage(text) {
   conversationHistory.push({ role: 'user', content: text });
 
   try {
-    const response = await fetch('http://127.0.0.1:8000/chat', {
+    const response = await fetch('https://portfolio-bot-kb5x.onrender.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
