@@ -1235,9 +1235,60 @@ footer span { color: var(--mc-green); }
           </div>
           <div class="project-stats">
             <span>⚡ Instant guides</span>
-            <span>🌐 Live Demo</span>
+            <span>📚 Study Helper</span>
           </div>
-          <button class="pixel-btn blue" style="font-size:7px;padding:8px 14px;">🔗 View Project</button>
+          <div class="project-actions" style="display:flex; gap:10px; margin-top:auto;">
+            <button class="pixel-btn blue" onclick="event.stopPropagation(); window.open('https://study-forge-phi.vercel.app/', '_blank');" style="font-size:7px;padding:8px 14px; flex:1;">🌐 Live Demo</button>
+            <button class="pixel-btn" onclick="event.stopPropagation(); window.open('https://github.com/ShivanshSaxena03/StudyForge', '_blank');" style="font-size:7px;padding:8px 14px; flex:1; background:#4A4A4A;">📁 GitHub</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" onclick="openProject('uml2code')">
+        <div class="project-banner" style="background:linear-gradient(135deg,#1A0A1A,#3A0A2E)">
+          <div class="project-banner-text">🚀</div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">UML TO CODE GENERATOR</div>
+          <div class="project-desc">AI-powered web app converting UML diagrams (PNG/JPG) into production-ready OOP code (Python, C++, C, Java) using Google Gemini API.</div>
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Gemini API</span>
+            <span class="project-tag">OOP</span>
+          </div>
+          <div class="project-stats">
+            <span>🧠 Gemini API</span>
+            <span>📤 Drag & Drop</span>
+          </div>
+          <div class="project-actions" style="display:flex; gap:10px; margin-top:auto;">
+            <button class="pixel-btn blue" onclick="event.stopPropagation(); window.open('https://uml-2-code.vercel.app/', '_blank');" style="font-size:7px;padding:8px 14px; flex:1;">🌐 Live Demo</button>
+            <button class="pixel-btn" onclick="event.stopPropagation(); window.open('https://github.com/ShivanshSaxena03/StudyForge', '_blank');" style="font-size:7px;padding:8px 14px; flex:1; background:#4A4A4A;">📁 GitHub</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" onclick="openProject('thinknblink')">
+        <div class="project-banner" style="background:linear-gradient(135deg,#1A1A0A,#3A2E0A)">
+          <div class="project-banner-text">🧠</div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">THINK-N-BLINK — PATTERN GAME</div>
+          <div class="project-desc">Memory-based pattern replication game utilizing WebSockets for real-time multiplayer leaderboard sync and statistics.</div>
+          <div class="project-tags">
+            <span class="project-tag">HTML/CSS</span>
+            <span class="project-tag">JS</span>
+            <span class="project-tag">WebSockets</span>
+            <span class="project-tag">Node.js</span>
+          </div>
+          <div class="project-stats">
+            <span>⚡ WebSockets</span>
+            <span>🏆 Leaderboards</span>
+          </div>
+          <div class="project-actions" style="display:flex; gap:10px; margin-top:auto;">
+            <button class="pixel-btn blue" onclick="event.stopPropagation(); window.open('https://think-n-blink.vercel.app/', '_blank');" style="font-size:7px;padding:8px 14px; flex:1;">🌐 Live Demo</button>
+            <button class="pixel-btn" onclick="event.stopPropagation(); window.open('https://github.com/ShivanshSaxena03/ThinkNBlink', '_blank');" style="font-size:7px;padding:8px 14px; flex:1; background:#4A4A4A;">📁 GitHub</button>
+          </div>
         </div>
       </div>
 
@@ -1567,6 +1618,8 @@ function scrollToSection(id) {
 // ===== PROJECT REDIRECT =====
 const projectLinks = {
   studyforge: 'https://study-forge-phi.vercel.app/',
+  uml2code: 'https://uml-2-code.vercel.app/',
+  thinknblink: 'https://think-n-blink.vercel.app/',
   outfit: 'https://github.com/ShivanshSaxena03',
   aqua: 'https://github.com/ShivanshSaxena03',
   derma: 'https://github.com/ShivanshSaxena03',
@@ -1616,10 +1669,12 @@ SKILLS:
 
 PROJECTS:
 1. StudyForge - AI Study Booklets (React, Vite, LLM) - Generates comprehensive, structured study booklets and revision guides from notes, syllabi, or topics. Live: https://study-forge-phi.vercel.app/, GitHub: https://github.com/ShivanshSaxena03/StudyForge
-2. AI Outfit Generator Web App (React, FastAPI, LLM) - Reduced styling effort by 40%, handles 100+ prompts with real-time generation
-3. AquaSentinel - Object Detection System (Python, YOLOv5, OpenCV) - 20+ FPS detection, 500+ event logs, 20% faster incident resolution, 15% fewer false positives
-4. AI Derma - Skin Analysis Platform (Python, FastAPI, LLM, React) - 500+ image samples, personalized skincare recommendations
-5. ScrapySniffer - Web Scraper (Python, BeautifulSoup) - 100+ articles/run, 60% better relevance, 80% less manual analysis time
+2. UML to Code Generator (React, FastAPI, Gemini API) - Converts UML diagrams (PNG/JPG) into OOP code (Python, C++, C, Java). Live: https://uml-2-code.vercel.app/, GitHub: https://github.com/ShivanshSaxena03/StudyForge
+3. Think-N-Blink (JS, WebSockets, Node.js) - Memory-based pattern game with WebSockets for real-time multiplayer leaderboard sync. Live: https://think-n-blink.vercel.app/, GitHub: https://github.com/ShivanshSaxena03/ThinkNBlink
+4. AI Outfit Generator Web App (React, FastAPI, LLM) - Reduced styling effort by 40%, handles 100+ prompts with real-time generation
+5. AquaSentinel - Object Detection System (Python, YOLOv5, OpenCV) - 20+ FPS detection, 500+ event logs, 20% faster incident resolution, 15% fewer false positives
+6. AI Derma - Skin Analysis Platform (Python, FastAPI, LLM, React) - 500+ image samples, personalized skincare recommendations
+7. ScrapySniffer - Web Scraper (Python, BeautifulSoup) - 100+ articles/run, 60% better relevance, 80% less manual analysis time
 
 CERTIFICATIONS:
 - The Complete Python Developer (Udemy)
