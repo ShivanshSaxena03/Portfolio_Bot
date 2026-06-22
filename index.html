@@ -1220,6 +1220,27 @@ footer span { color: var(--mc-green); }
     <div class="section-divider"></div>
     <div class="projects-grid">
 
+      <div class="project-card fade-in" onclick="openProject('studyforge')">
+        <div class="project-banner" style="background:linear-gradient(135deg,#0A1A2E,#0A3A4A)">
+          <div class="project-banner-text">📖</div>
+        </div>
+        <div class="project-body">
+          <div class="project-name">STUDYFORGE — AI STUDY BOOKLETS</div>
+          <div class="project-desc">AI-powered platform generating comprehensive, structured study booklets and revision guides from notes, syllabi, or topics.</div>
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Vite</span>
+            <span class="project-tag">LLM</span>
+            <span class="project-tag">AI Agent</span>
+          </div>
+          <div class="project-stats">
+            <span>⚡ Instant guides</span>
+            <span>🌐 Live Demo</span>
+          </div>
+          <button class="pixel-btn blue" style="font-size:7px;padding:8px 14px;">🔗 View Project</button>
+        </div>
+      </div>
+
       <div class="project-card fade-in" onclick="openProject('outfit')">
         <div class="project-banner" style="background:linear-gradient(135deg,#1A0A2E,#3A1060)">
           <div class="project-banner-text">👗</div>
@@ -1545,6 +1566,7 @@ function scrollToSection(id) {
 
 // ===== PROJECT REDIRECT =====
 const projectLinks = {
+  studyforge: 'https://study-forge-phi.vercel.app/',
   outfit: 'https://github.com/ShivanshSaxena03',
   aqua: 'https://github.com/ShivanshSaxena03',
   derma: 'https://github.com/ShivanshSaxena03',
@@ -1593,10 +1615,11 @@ SKILLS:
 - Tools: Selenium, BeautifulSoup, Requests, Git, Linux
 
 PROJECTS:
-1. AI Outfit Generator Web App (React, FastAPI, LLM) - Reduced styling effort by 40%, handles 100+ prompts with real-time generation
-2. AquaSentinel - Object Detection System (Python, YOLOv5, OpenCV) - 20+ FPS detection, 500+ event logs, 20% faster incident resolution, 15% fewer false positives
-3. AI Derma - Skin Analysis Platform (Python, FastAPI, LLM, React) - 500+ image samples, personalized skincare recommendations
-4. ScrapySniffer - Web Scraper (Python, BeautifulSoup) - 100+ articles/run, 60% better relevance, 80% less manual analysis time
+1. StudyForge - AI Study Booklets (React, Vite, LLM) - Generates comprehensive, structured study booklets and revision guides from notes, syllabi, or topics. Live: https://study-forge-phi.vercel.app/, GitHub: https://github.com/ShivanshSaxena03/StudyForge
+2. AI Outfit Generator Web App (React, FastAPI, LLM) - Reduced styling effort by 40%, handles 100+ prompts with real-time generation
+3. AquaSentinel - Object Detection System (Python, YOLOv5, OpenCV) - 20+ FPS detection, 500+ event logs, 20% faster incident resolution, 15% fewer false positives
+4. AI Derma - Skin Analysis Platform (Python, FastAPI, LLM, React) - 500+ image samples, personalized skincare recommendations
+5. ScrapySniffer - Web Scraper (Python, BeautifulSoup) - 100+ articles/run, 60% better relevance, 80% less manual analysis time
 
 CERTIFICATIONS:
 - The Complete Python Developer (Udemy)
